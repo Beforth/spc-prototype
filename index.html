@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SPC Monitor Prototype</title>
 <script>
 /* Theme: use the saved choice, else Light. Never follow the PC's dark setting automatically. */
@@ -18,13 +23,7 @@ document.documentElement.setAttribute('data-theme',t)})();
   --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0A121D; --surface:#111B2A; --surface2:#16233500; --line:#22314A; --grid:#1B283D;
-  --ink:#E7EEF7; --ink2:#A9B6C8; --muted:#72839B;
-  --accent:#5C9CFF; --accent-soft:#162A4B; --accent-ink:#06101E;
-  --good:#3DCB8B; --good-soft:#12301F; --warn:#E5AA3C; --warn-soft:#352A12; --bad:#FF6D66; --bad-soft:#3A1717;
-  --side:#08101B; --side-ink:#9FB0C6; --side-active:#15233A;
-  --shadow:0 1px 2px rgba(0,0,0,.4);color-scheme:dark}}
+
 :root[data-theme="dark"]{
   --bg:#0A121D; --surface:#111B2A; --surface2:#162335; --line:#22314A; --grid:#1B283D;
   --ink:#E7EEF7; --ink2:#A9B6C8; --muted:#72839B;
@@ -32,7 +31,7 @@ document.documentElement.setAttribute('data-theme',t)})();
   --good:#3DCB8B; --good-soft:#12301F; --warn:#E5AA3C; --warn-soft:#352A12; --bad:#FF6D66; --bad-soft:#3A1717;
   --side:#08101B; --side-ink:#9FB0C6; --side-active:#15233A;
   --shadow:0 1px 2px rgba(0,0,0,.4);color-scheme:dark}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--surface2:#162335}}
+
 /* dropdown list readability in both themes */
 :root{color-scheme:light}
 select{color-scheme:inherit}
@@ -253,13 +252,7 @@ h3.sec{margin:0;font-size:12px;text-transform:uppercase;letter-spacing:.1em;colo
   --side:#FFFFFF; --side-ink:#62554A; --side-strong:#2A1F17; --side-mute:#A89B8C; --side-line:#EBE2D5; --side-hover:#F7F1E9; --side-active:#FDE8D9; --side-active-ink:#C2410C;
   --shadow:0 1px 2px rgba(80,50,20,.05),0 10px 30px rgba(80,50,20,.07);
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#15110D; --surface:#1F1A15; --surface2:#262019; --line:#352D24; --grid:#2D261E;
-  --ink:#F5EDE3; --ink2:#C2B5A6; --muted:#8C7F70;
-  --accent:#FF7A33; --accent-soft:#3A2314; --accent-ink:#1A0E05; --chart:#35C2C4;
-  --good:#4CC38A; --good-soft:#15301F; --warn:#E5AA3C; --warn-soft:#352A12; --bad:#FF6D66; --bad-soft:#3A1717;
-  --side:#1A1511; --side-ink:#C2B5A6; --side-strong:#F5EDE3; --side-mute:#7D7064; --side-line:#2D261E; --side-hover:#241E18; --side-active:#3A2314; --side-active-ink:#FF9A5C;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.25);color-scheme:dark}}
+
 :root[data-theme="dark"]{
   --bg:#15110D; --surface:#1F1A15; --surface2:#262019; --line:#352D24; --grid:#2D261E;
   --ink:#F5EDE3; --ink2:#C2B5A6; --muted:#8C7F70;
@@ -267,8 +260,8 @@ h3.sec{margin:0;font-size:12px;text-transform:uppercase;letter-spacing:.1em;colo
   --good:#4CC38A; --good-soft:#15301F; --warn:#E5AA3C; --warn-soft:#352A12; --bad:#FF6D66; --bad-soft:#3A1717;
   --side:#1A1511; --side-ink:#C2B5A6; --side-strong:#F5EDE3; --side-mute:#7D7064; --side-line:#2D261E; --side-hover:#241E18; --side-active:#3A2314; --side-active-ink:#FF9A5C;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.25);color-scheme:dark}
-body{transition:background .25s,color .25s}
-.side{background:var(--side);color:var(--side-ink);border-right:1px solid var(--side-line);transition:background .25s}
+body{}
+.side{background:var(--side);color:var(--side-ink);border-right:1px solid var(--side-line)}
 .brand{color:var(--side-strong)}
 .logo{border-radius:11px;box-shadow:0 4px 12px rgba(232,89,12,.35)}
 .navlbl{color:var(--side-mute)}
@@ -359,12 +352,7 @@ body{transition:background .25s,color .25s}
   --side:#1F1C1A; --side-ink:#B9B0A6; --side-strong:#FFFFFF; --side-mute:#7F766C; --side-line:#332E2A; --side-hover:#2A2623; --side-active:#3A3431; --side-active-ink:#FFFFFF;
   --shadow:0 1px 2px rgba(50,35,20,.05),0 10px 30px rgba(50,35,20,.07);
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#161311; --surface:#201C19; --surface2:#27221F; --line:#37312C; --grid:#2E2925;
-  --ink:#F3ECE3; --ink2:#C4B9AD; --muted:#8E8377;
-  --accent:#E0704F; --accent-soft:#3B2219; --accent-ink:#1A0D08; --chart:#D9C9B6;
-  --side:#110F0D; --side-line:#2A2521; --side-hover:#1E1A17; --side-active:#2E2824;
-  color-scheme:dark}}
+
 :root[data-theme="dark"]{
   --bg:#161311; --surface:#201C19; --surface2:#27221F; --line:#37312C; --grid:#2E2925;
   --ink:#F3ECE3; --ink2:#C4B9AD; --muted:#8E8377;
@@ -394,13 +382,7 @@ body{transition:background .25s,color .25s}
   --side:#FFFFFF; --side-ink:#51585C; --side-strong:#16191B; --side-mute:#8B9391; --side-line:#E4E8DC; --side-hover:#F1F4EC; --side-active:#F5B335; --side-active-ink:#1A1405;
   --shadow:0 1px 2px rgba(20,30,20,.04),0 10px 30px rgba(20,40,25,.07);
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0F1211; --surface:#171B1A; --surface2:#1D2221; --line:#2A302E; --grid:#232927;
-  --ink:#EEF2EF; --ink2:#B6BFBB; --muted:#7F8885;
-  --accent:#F5B335; --accent-soft:#33290F; --accent-ink:#1A1405; --chart:#3DD08A;
-  --good:#3DD08A; --good-soft:#12301F; --warn:#E5AA3C; --warn-soft:#352A12; --bad:#FF6D66; --bad-soft:#3A1717;
-  --side:#0A0C0B; --side-ink:#A9B1B3; --side-strong:#FFFFFF; --side-mute:#6D7679; --side-line:#1E2321; --side-hover:#151918;
-  color-scheme:dark}}
+
 :root[data-theme="dark"]{
   --bg:#0F1211; --surface:#171B1A; --surface2:#1D2221; --line:#2A302E; --grid:#232927;
   --ink:#EEF2EF; --ink2:#B6BFBB; --muted:#7F8885;
@@ -418,7 +400,7 @@ body{transition:background .25s,color .25s}
 .avatar{background:var(--amber);color:#16191B}
 .hero{background:linear-gradient(120deg,#EAF6E6,var(--surface) 72%)}
 :root[data-theme="dark"] .hero{background:linear-gradient(120deg,#16291F,var(--surface) 72%)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero{background:linear-gradient(120deg,#16291F,var(--surface) 72%)}}
+
 .kpi.hot{background:linear-gradient(150deg,#22282A,#101314);border-color:transparent;color:#fff}
 .kpi.hot .l,.kpi.hot .d,.kpi.hot .v small{color:rgba(255,255,255,.72)}
 .kpi.hot .ring circle:first-child{stroke:rgba(255,255,255,.18)}.kpi.hot .ring .rg{stroke:var(--amber)!important}
@@ -436,6 +418,8 @@ body{transition:background .25s,color .25s}
 #c-live .ln{animation:none!important;stroke-dasharray:none!important;stroke-dashoffset:0!important}
 #c-live,#c-live svg,#lv-state .live-dot::before,.tools .live-dot::before{animation:none!important}
 </style>
+</head>
+<body>
 
 <div class="app">
   <aside class="side">
@@ -977,3 +961,6 @@ afterMap.reports=()=>{
 $('#theme').addEventListener('click',()=>{const r=document.documentElement,next=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',next);try{localStorage.setItem('spc-theme',next)}catch(e){}});
 addEventListener('hashchange',()=>route());route();
 </script>
+
+</body>
+</html>
